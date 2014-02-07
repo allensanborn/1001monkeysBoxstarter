@@ -17,4 +17,4 @@ cinst notepadplusplus.install
 Install-ChocolateyFileAssociation ".txt" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 Install-ChocolateyFileAssociation ".config" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 
-#Install-WindowsUpdate -AcceptEula
+Install-WindowsUpdate -AcceptEula
