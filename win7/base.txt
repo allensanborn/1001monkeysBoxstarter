@@ -1,0 +1,20 @@
+#START http://boxstarter.org/package/url?
+ 
+#update chocolatey to the latest version
+chocolatey update
+ 
+#update all chocolatey packages
+cup all
+ 
+Update-ExecutionPolicy remotesigned
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showFileExtensions
+Disable-InternetExplorerESC
+tzutil /s "Central Standard Time"
+
+cinst MicrosoftSecurityEssentials
+
+cinst notepadplusplus.install
+Install-ChocolateyFileAssociation ".txt" "$env:programfiles\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".config" "$env:programfiles\Notepad++\notepad++.exe"
+
+#Install-WindowsUpdate -AcceptEula
