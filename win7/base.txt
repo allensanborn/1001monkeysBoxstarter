@@ -2,7 +2,7 @@
 
 Update-ExecutionPolicy remotesigned
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showFileExtensions
-Disable-InternetExplorerESC
+#Disable-InternetExplorerESC
 tzutil /s "Central Standard Time"
 
 cinst MicrosoftSecurityEssentials
@@ -10,6 +10,7 @@ cinst MicrosoftSecurityEssentials
 cinst notepadplusplus.install
 Install-ChocolateyFileAssociation ".txt" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 Install-ChocolateyFileAssociation ".config" "C:\Program Files (x86)\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".xml" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 
 Install-WindowsUpdate -AcceptEula
 
