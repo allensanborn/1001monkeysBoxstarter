@@ -1,0 +1,10 @@
+#START http://boxstarter.org/package/url?
+
+Update-ExecutionPolicy remotesigned
+Set-ExplorerOptions -showFileExtensions
+Disable-InternetExplorerESC
+tzutil /s "Central Standard Time"
+
+cinst MicrosoftSecurityEssentials
+
+Install-WindowsUpdate -AcceptEula
