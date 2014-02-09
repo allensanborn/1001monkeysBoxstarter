@@ -2,6 +2,10 @@ cinst dotnet3.5
 
 cinst webpicmd
 
+$url="https://raw2.github.com/allensanborn/1001monkeysBoxstarter/master/webpicmdfix/WebpiCmd.bat"
+$file="C:\chocolatey\bin\WebpiCmd.bat"
+Get-ChocolateyWebFile "webpicmdfix" "$file" "$url"
+
 webpicmd /install /products:iis7 /accepteula
 
 webpicmd /install /products:WebMatrix /accepteula
