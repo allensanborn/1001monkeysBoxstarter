@@ -1,0 +1,11 @@
+cinst dotnet3.5
+cinst webpicmd
+
+cinst iis7 -source webpi
+cinst webmatrix -source webpi
+
+#cinst dotnet4.5
+#cinst DotNet4.5.1
+#cinst powershell
+
+#cinst VisualStudio2013Premium
