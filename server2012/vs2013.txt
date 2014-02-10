@@ -31,8 +31,8 @@ cinst VisualStudio2013Ultimate -InstallArguments "SQL WebTools"
 #VS2013 wants you to install these four packages when you start it
 cinst VS2013.1
 cinst VWDOrVs2013AzurePack -source webpi
-NuGetPackageManagerForVisualStudio2013 http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca/file/105933/5/NuGet.Tools.2013.vsix
-VisualFSharpTools http://download.microsoft.com/download/3/0/A/30A5D6DD-5B5C-4E06-B331-A88AA0B53150/FSharp_Bundle.exe
+Install-ChocolateyVsixPackage NuGetPackageManagerForVisualStudio2013 http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca/file/105933/5/NuGet.Tools.2013.vsix
+#VisualFSharpTools http://download.microsoft.com/download/3/0/A/30A5D6DD-5B5C-4E06-B331-A88AA0B53150/FSharp_Bundle.exe
 
 cinst typescript.vs
 
