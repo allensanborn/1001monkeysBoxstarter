@@ -1,13 +1,90 @@
+#START http://boxstarter.org/package/url?
+
+Update-ExecutionPolicy remotesigned
+Set-ExplorerOptions -showFileExtensions
+Disable-InternetExplorerESC
+tzutil /s "Central Standard Time"
+
+cinst MicrosoftSecurityEssentials
+
 cinst dotnet3.5
+#webpicmd has an unlisted dependency on dotnet3.5
 cinst webpicmd
 
 $url="https://raw2.github.com/allensanborn/1001monkeysBoxstarter/master/webpicmdfix/WebpiCmd.bat"
 $file="C:\chocolatey\bin\WebpiCmd.bat"
 Get-ChocolateyWebFile "webpicmdfix" "$file" "$url"
 
-webpicmd /install /products:iis7 /accepteula
-webpicmd /install /products:WebMatrix /accepteula
+cinst iis7 -source webpi
+cinst WebMatrix -source webpi
 cinst dotnet4.5
 cinst DotNet4.5.1
 cinst powershell
-cinst VisualStudio2013Premium
+
+#cinst VisualStudio2013ExpressWeb
+#cinst VisualStudio2013Professional
+#cinst VisualStudio2013Premium
+cinst VisualStudio2013Ultimate -InstallArguments "SQL WebTools"
+#cinst VisualStudio2013TestProfessional
+#cinst VisualStudioTeamFoundationServerExpress2013
+
+#VS2013 wants you to install these four packages when you start it
+cinst VS2013.1
+cinst VWDOrVs2013AzurePack -source webpi
+NuGetPackageManagerForVisualStudio2013 http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca/file/105933/5/NuGet.Tools.2013.vsix
+VisualFSharpTools http://download.microsoft.com/download/3/0/A/30A5D6DD-5B5C-4E06-B331-A88AA0B53150/FSharp_Bundle.exe
+
+cinst typescript.vs
+
+Install-ChocolateyVsixPackage WebEssentials2013 http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361/file/105627/31/WebEssentials2013.vsix
+Install-ChocolateyVsixPackage ImageOptimizr http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/file/38601/13/Image%20Optimizer.vsix
+
+Install-ChocolateyVsixPackage ChutzpahTestRunnerContextMenuExtension http://visualstudiogallery.msdn.microsoft.com/71a4e9bd-f660-448f-bd92-f5a65d39b7f0/file/52593/24/chutzpah.visualstudio.vsix
+Install-ChocolateyVsixPackage ChutzpahTestAdapterForTheTestExplorer http://visualstudiogallery.msdn.microsoft.com/f8741f04-bae4-4900-81c7-7c9bfb9ed1fe/file/66979/19/Chutzpah.VS2012.vsix
+Install-ChocolateyVsixPackage TypeScriptJasmineTests http://visualstudiogallery.msdn.microsoft.com/80e09b78-e24f-4094-9c41-7459e3414238/file/107352/4/TypeScript.JasmineTest.vsix
+Install-ChocolateyVsixPackage TypeScriptQunitTestProject http://visualstudiogallery.msdn.microsoft.com/e5900762-3956-479b-bc01-7835a1af9564/file/107356/1/TypeScript.QunitTest.vsix
+
+Install-ChocolateyVsixPackage SideWaffle http://sidewaffle.com/feed/web/templatepack.vsix
+Install-ChocolateyVsixPackage DurandalTemplate http://visualstudiogallery.msdn.microsoft.com/fe275f87-bd29-4286-8774-6e96751f62bb/file/109833/2/DurandalTemplate.vsix
+Install-ChocolateyVsixPackage PostSharp http://visualstudiogallery.msdn.microsoft.com/a058d5d3-e654-43f8-a308-c3bdfdd0be4a/file/89212/37/PostSharp-3.1.29.vsix
+
+cinst ankhsvn
+cinst dotpeek
+cinst resharper
+cinst stylecop
+cinst tortoisesvn
+cinst beyondcompare
+cinst sourcetree
+ 
+cinst 7zip.install
+cinst baregrep
+cinst baretail
+cinst bleachbit
+cinst curl
+cinst expresso
+cinst fiddler4
+cinst IrfanView
+cinst keepass
+cinst linqpad4
+cinst notepadplusplus.install
+Install-ChocolateyFileAssociation ".txt" "C:\Program Files (x86)\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".config" "C:\Program Files (x86)\Notepad++\notepad++.exe"
+Install-ChocolateyFileAssociation ".xml" "C:\Program Files (x86)\Notepad++\notepad++.exe"
+cinst phantomjs
+cinst sumatrapdf.install
+cinst sysinternals
+cinst windirstat
+ 
+cinst firefox
+cinst GoogleChrome
+cinst tor-browser
+
+#cinst adblockplusie
+#cinst adblockpluschrome
+#cinst adblockplusfirefox
+
+#Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"
+ 
+
+
+Install-WindowsUpdate -AcceptEula
