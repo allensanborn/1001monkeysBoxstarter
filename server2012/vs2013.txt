@@ -27,6 +27,7 @@ cinst powershell
 cinst VisualStudio2013Ultimate -InstallArguments "SQL WebTools"
 #cinst VisualStudio2013TestProfessional
 #cinst VisualStudioTeamFoundationServerExpress2013
+#Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"
 
 #VS2013 wants you to install these four packages when you start it
 cinst VS2013.1
@@ -63,9 +64,11 @@ cinst bleachbit
 cinst curl
 cinst expresso
 cinst fiddler4
+Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Fiddler2\Fiddler.exe"
 cinst IrfanView
 cinst keepass
 cinst linqpad4
+Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\LINQPad4\LINQPad.exe"
 cinst notepadplusplus.install
 Install-ChocolateyFileAssociation ".txt" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 Install-ChocolateyFileAssociation ".config" "C:\Program Files (x86)\Notepad++\notepad++.exe"
@@ -76,6 +79,7 @@ cinst sysinternals
 cinst windirstat
  
 cinst firefox
+Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Mozilla Firefox\firefox.exe"
 cinst GoogleChrome
 cinst tor-browser
 
