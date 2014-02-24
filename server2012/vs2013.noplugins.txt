@@ -23,8 +23,8 @@ cinst powershell
 
 #cinst VisualStudio2013ExpressWeb
 #cinst VisualStudio2013Professional
-#cinst VisualStudio2013Premium
-cinst VisualStudio2013Ultimate -InstallArguments "SQL WebTools"
+cinst VisualStudio2013Premium -InstallArguments "SQL WebTools"
+#cinst VisualStudio2013Ultimate -InstallArguments "SQL WebTools"
 #cinst VisualStudio2013TestProfessional
 #cinst VisualStudioTeamFoundationServerExpress2013
 #Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"
