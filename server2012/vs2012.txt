@@ -30,10 +30,10 @@ cinst VisualStudio2012Professional
 #Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"
 
 #VS2012 wants you to install these packages when you start it
-cinst VS2012.4
-Install-ChocolateyVsixPackage  NuGetPackageManagerForVisualStudio2012 http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c/file/37502/36/NuGet.Tools.vsix 
+#cinst VS2012.4
+#Install-ChocolateyVsixPackage  NuGetPackageManagerForVisualStudio2012 http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c/file/37502/36/NuGet.Tools.vsix 
 
-cinst typescript.vs
+#cinst typescript.vs
 
 #Install-ChocolateyVsixPackage WebEssentials2012 http://visualstudiogallery.msdn.microsoft.com/07d54d12-7133-4e15-becb-6f451ea3bea6/file/79465/41/WebEssentials2012.vsix
 #Install-ChocolateyVsixPackage ImageOptimizr http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/file/38601/13/Image%20Optimizer.vsix
