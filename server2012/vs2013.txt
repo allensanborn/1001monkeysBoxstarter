@@ -74,6 +74,7 @@ Install-ChocolateyFileAssociation ".txt" "C:\Program Files (x86)\Notepad++\notep
 Install-ChocolateyFileAssociation ".config" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 Install-ChocolateyFileAssociation ".xml" "C:\Program Files (x86)\Notepad++\notepad++.exe"
 cinst phantomjs
+cinst sharex
 cinst sumatrapdf.install
 cinst sysinternals
 cinst windirstat
