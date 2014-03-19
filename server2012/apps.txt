@@ -1,3 +1,5 @@
+#START http://boxstarter.org/package/url?
+
 cinst ankhsvn
 cinst dotpeek
 cinst resharper

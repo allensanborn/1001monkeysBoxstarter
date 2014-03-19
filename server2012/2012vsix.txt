@@ -1,0 +1,14 @@
+#START http://boxstarter.org/package/url?
+
+Install-ChocolateyVsixPackage WebEssentials2012 http://visualstudiogallery.msdn.microsoft.com/07d54d12-7133-4e15-becb-6f451ea3bea6/file/79465/41/WebEssentials2012.vsix
+Install-ChocolateyVsixPackage ImageOptimizr http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/file/38601/13/Image%20Optimizer.vsix
+Install-ChocolateyVsixPackage CssCopFxCopForStylesheets http://visualstudiogallery.msdn.microsoft.com/a921b98e-9430-4be2-bf53-1169e12bdb50/file/62099/6/CssLint.vsix
+
+Install-ChocolateyVsixPackage ChutzpahTestRunnerContextMenuExtension http://visualstudiogallery.msdn.microsoft.com/71a4e9bd-f660-448f-bd92-f5a65d39b7f0/file/52593/24/chutzpah.visualstudio.vsix
+Install-ChocolateyVsixPackage ChutzpahTestAdapterForTheTestExplorer http://visualstudiogallery.msdn.microsoft.com/f8741f04-bae4-4900-81c7-7c9bfb9ed1fe/file/66979/19/Chutzpah.VS2012.vsix
+Install-ChocolateyVsixPackage TypeScriptJasmineTests http://visualstudiogallery.msdn.microsoft.com/80e09b78-e24f-4094-9c41-7459e3414238/file/107352/4/TypeScript.JasmineTest.vsix
+Install-ChocolateyVsixPackage TypeScriptQunitTestProject http://visualstudiogallery.msdn.microsoft.com/e5900762-3956-479b-bc01-7835a1af9564/file/107356/1/TypeScript.QunitTest.vsix
+
+Install-ChocolateyVsixPackage SideWaffle http://sidewaffle.com/feed/web/templatepack.vsix
+Install-ChocolateyVsixPackage DurandalTemplate http://visualstudiogallery.msdn.microsoft.com/fe275f87-bd29-4286-8774-6e96751f62bb/file/109833/2/DurandalTemplate.vsix
+Install-ChocolateyVsixPackage PostSharp http://visualstudiogallery.msdn.microsoft.com/a058d5d3-e654-43f8-a308-c3bdfdd0be4a/file/89212/37/PostSharp-3.1.29.vsix
