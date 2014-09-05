@@ -10,3 +10,4 @@ cmd /c "%DIR%..\..\..\Program Files\Microsoft\Web Platform Installer\WebpiCmd.ex
 
 
 exit /b %ERRORLEVEL%
+
